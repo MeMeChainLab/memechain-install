@@ -9,4 +9,11 @@ echo "|_| |_| |_|\___|_| |_| |_|\___|\___|_| |_|\__,_|_|_| |_|";
 echo "";
 echo "";
 
+# Declare a log file and a temp directory
+
+# Parse command line arguments
+
+# Check if the directory exists
+
+
 # add some install script here
