@@ -10,6 +10,8 @@ echo "";
 echo "";
 
 # Declare a log file and a temp directory
+LOGFILE="$HOME/memechain-temp/logfile.log"
+TEMP_DIR="$HOME/memechain-temp"
 
 # Parse command line arguments
 
