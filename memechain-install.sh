@@ -17,5 +17,11 @@ TEMP_DIR="$HOME/memechain-temp"
 
 # Check if the directory exists
 
+# Create a temporary directory to work from
+
+# Log and print the log file location
+
+# Change to $TEMP_DIR and print a message
+
 
 # add some install script here
