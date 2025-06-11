@@ -16,12 +16,25 @@ TEMP_DIR="$HOME/memechain-temp"
 # Parse command line arguments
 
 # Check if the directory exists
+if [ -d "$TEMP_DIR" ]; then
+    read -p "Directory $TEMP_DIR exists. Do you want to clear it out? (y/n) " -n 1 -r
+    echo    # move to a new line
+    if [[ $REPLY =~ ^[Yy]$ ]]
+    then
+        rm -rf "$TEMP_DIR"
+        echo "Directory $TEMP_DIR has been removed."
+    fi
+fi
 
 # Create a temporary directory to work from
+mkdir -p "$TEMP_DIR"
+touch "$LOGFILE"
 
 # Log and print the log file location
+echo "Log file is located at: $LOGFILE" | tee -a "$LOGFILE"
 
 # Change to $TEMP_DIR and print a message
-
+cd "$TEMP_DIR" || exit 1
+echo "Working from temporary directory: $TEMP_DIR" | tee -a "$LOGFILE"
 
 # add some install script here
