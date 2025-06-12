@@ -37,4 +37,41 @@ echo "Log file is located at: $LOGFILE" | tee -a "$LOGFILE"
 cd "$TEMP_DIR" || exit 1
 echo "Working from temporary directory: $TEMP_DIR" | tee -a "$LOGFILE"
 
+# Set VERSION based on user input or fetch latest
+
+# Validate version format
+
+# Detect the operating system and architecture
+
+# Translate architecture to expected format
+
+# Translate OS to expected format
+
+
+# Construct the download URL
+
+# Log and print a message
+
+
+# Download the tarball
+
+# Detect if running on macOS and use appropriate command for checksum
+
+# Download checksums.txt
+
+
+# Find the expected checksum in checksums.txt
+
+# Verify the checksum
+
+# Extract the tarball to the temporary directory
+
+# Log and print a message
+
+# Remove the tarball to clean up
+
+# Log and print a message
+
+# Keep in current directory
+
 # add some install script here
