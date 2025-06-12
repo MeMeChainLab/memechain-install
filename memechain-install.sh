@@ -14,6 +14,17 @@ LOGFILE="$HOME/memechain-temp/logfile.log"
 TEMP_DIR="$HOME/memechain-temp"
 
 # Parse command line arguments
+while getopts "v:" opt; do
+  case $opt in
+    v) USER_VERSION="$OPTARG"
+    ;;
+    \?) echo "Invalid option -$OPTARG" >&2
+        echo "Usage: $0 [-v version]"
+        echo "Example: $0 -v v0.11.0"
+        exit 1
+    ;;
+  esac
+done
 
 # Check if the directory exists
 if [ -d "$TEMP_DIR" ]; then
@@ -47,18 +58,15 @@ echo "Working from temporary directory: $TEMP_DIR" | tee -a "$LOGFILE"
 
 # Translate OS to expected format
 
-
 # Construct the download URL
 
 # Log and print a message
-
 
 # Download the tarball
 
 # Detect if running on macOS and use appropriate command for checksum
 
 # Download checksums.txt
-
 
 # Find the expected checksum in checksums.txt
 
